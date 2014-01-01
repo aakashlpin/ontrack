@@ -45,7 +45,7 @@ define(function(require, exports, module) {
         targetForm = targetElement.closest('form'),
         submitBtn = targetForm.find(this.dui.formSubmitButton);
 
-      empty = $.trim(targetElement.val()).length == 0;
+      empty = $.trim(targetElement.val()).length === 0;
 
       if (empty) {
         submitBtn.attr('disabled', 'disabled');
@@ -61,7 +61,7 @@ define(function(require, exports, module) {
       var serializedArray = targetForm.serializeArray();
       serializedArray = serializedArray.concat(
             targetForm.find('input[type=checkbox]:not(:checked)').map(function() {
-                        return {"name": this.name, "value": false}
+                        return {"name": this.name, "value": false};
                     }).get()
             );
 
