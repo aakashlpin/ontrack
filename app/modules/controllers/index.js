@@ -2,9 +2,7 @@ define(function(require, exports, module) {
   "use strict";
 
   // External dependencies.
-  var IndexView = require('views/report');
-  var IndexCollection = require('collections/reports');
-  var IndexModel = require('models/report');
+  var IndexView = require('views/login');
   var app = require('../../app');
 
   // Defining the application router.
@@ -14,9 +12,7 @@ define(function(require, exports, module) {
         "Moonlight with me on ideas, design and development. " +
         "Ping me at aakash.lpin@gmail.com");
 
-      var indexCollection = new IndexCollection();
-      var indexModel = new IndexModel();
-      var indexView = new IndexView({collection: indexCollection, model: indexModel});
+      var indexView = new IndexView();
       app.ui.main.show(indexView.render());
     }
   };

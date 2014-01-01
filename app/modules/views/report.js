@@ -1,11 +1,9 @@
 define(function(require, exports, module) {
 
   var Marionette = require('marionette'),
-    templates = require('templates'),
-    Firebase = require('firebase'),
-    FirebaseSimpleLogin = require('firebase-simple-login');
+    templates = require('templates');
 
-    require('semantic');
+  require('semantic');
 
   module.exports = Marionette.Layout.extend({
     template: templates.fillReport,
@@ -78,31 +76,6 @@ define(function(require, exports, module) {
         .find('input, textarea')
         .focus()
       ;
-
-    },
-    onShow: function() {
-      /*      this.collection.fetch({
-       success: function(data) {
-       console.log(data);
-       }
-       });*/
-      var firebaseRef = new Firebase('https://ontrack-2014.firebaseio.com');
-      var auth = new FirebaseSimpleLogin(firebaseRef, function(error, user) {
-        if (error) {
-          // an error occurred while attempting login
-          alert(error);
-        } else if (user) {
-          // user authenticated with Firebase
-          console.log(user);
-
-          // Log out so we can log in again with a different provider.
-          auth.logout();
-        } else {
-          // user is logged out
-        }
-      });
-
-//      auth.login('facebook');
 
     }
   });
