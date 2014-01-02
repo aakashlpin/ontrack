@@ -8,7 +8,7 @@
   <div class="column">
     <ol class="unstyled">
       <li class="item item-1">
-        <h1>Make A Million USD (~50 Lacs INR) by 31st Dec 2014</h1>
+        <h1>Make 100k USD (~50 Lacs INR) by 31st Dec 2014</h1>
         <form class="ui form">
           <div class="field">
             <label for="money">How much did you make this month?</label>
